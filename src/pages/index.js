@@ -1,8 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Text } from "@quarkly/widgets";
+import { Theme, Image, Box, Text, Strong, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Section, Override, StackItem, Stack } from "@quarkly/components";
+import { Override, SocialMedia, StackItem, Stack, Section } from "@quarkly/components";
+import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
 		<Helmet>
@@ -12,43 +13,115 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section background="--color-greyD2" padding="64px 0" sm-padding="40px 0" border-radius="100px" />
-		<Section background="--color-green" padding="64px 0" sm-padding="40px 0" border-radius="100px">
-			<Stack>
-				<StackItem width="50%" lg-width="100%">
-					<Override
-						slot="StackItemContent"
-						margin-right="-20%"
-						padding-bottom="120%"
-						background="url(https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80) 50% 15%/cover"
-						lg-margin-right="0"
-						lg-padding-bottom="80%"
-					/>
-				</StackItem>
-				<StackItem width="50%" lg-width="100%">
-					<Override
-						slot="StackItemContent"
-						padding="98px 64px"
-						margin-left="-20%"
-						margin-top="36px"
-						background="#642412 url(https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0MjIzN30&h=2000) 30% 50%/cover scroll"
-						color="--light"
-						mix-blend-mode="color-burn"
-						lg-margin-left="0"
-						lg-margin-top="0"
-						flex-direction="column"
-					/>
-					<Text
-						as="h4"
-						margin="0"
-						font="--base"
-						letter-spacing="1px"
-						text-transform="uppercase"
+		<Box quarkly-title="wrap">
+			<Box quarkly-title="nav" position="relative" lg-padding="0px 24px 0px 24px">
+				<Box
+					quarkly-title="container"
+					max-width="1100px"
+					margin="0px auto 0px auto"
+					padding="15px 0px 15px 0px"
+					display="flex"
+					align-items="stretch"
+					flex-direction="row"
+					justify-content="space-between"
+				>
+					<Image width="64px" height="64px" src="https://images.unsplash.com/photo-1516876437184-593fda40c7ce?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0MjIzN30&w=2000" object-fit="cover" />
+					<Box display="flex" align-items="center" justify-content="center">
+						<Components.NavLink>
+							Home
+						</Components.NavLink>
+						<Components.NavLink>
+							Page
+						</Components.NavLink>
+						<Components.NavLink>
+							About
+						</Components.NavLink>
+						<Components.NavLink>
+							Blog
+						</Components.NavLink>
+					</Box>
+				</Box>
+			</Box>
+			<Box as="main" quarkly-title="main" padding="0px 0px 0px 0px">
+				<Section padding="100px 0 100px 0" lg-padding="100px 0 100px 0">
+					<Override slot="SectionContent" max-width="1100px" />
+					<Stack>
+						{"    "}
+						<StackItem width="50%" display="flex">
+							<Box>
+								<Text font="--headline1">
+									Hi, I use Quarkly!
+								</Text>
+								<Text font="normal 300 20px/2 --fontFamily-sans" letter-spacing="1px">
+									Let's test it hard! We'll se what's possible with this awesome tool! And let's just add a little bit more text here...
+								</Text>
+								<Button
+									background="#ff9671"
+									color="#000000"
+									hover-background="#ffc7b5"
+									transition="background 0.3s ease 0s"
+									padding="12px 24px 12px 24px"
+									border-radius="4px"
+									disabled={false}
+								>
+									<Strong>
+										Click me now
+									</Strong>
+								</Button>
+								<SocialMedia twitter="https://twitter.com/quarklyapp" telegram="https://t.me/joinchat/DqSYDhS0R9nMRvOtFbIxrQ" margin="30px 0px 0px 0px" justify-content="start">
+									<Override slot="link" border-color="#000000" background="--color-dark" />
+									<Override slot="icon" color="--lightPink" />
+								</SocialMedia>
+							</Box>
+							{"        "}{"    "}
+						</StackItem>
+						{"    "}
+						<StackItem width="50%" display="flex">
+							<Image width="100%" height="auto" src="https://images.unsplash.com/photo-1602881916963-5daf2d97c06e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0MjIzN30&h=2000" transition="all 2s --transitionTimingFunction-easeOut 0s" />
+							{"        "}{"    "}
+						</StackItem>
+					</Stack>
+				</Section>
+				<Section padding="100px 0 100px 0" lg-padding="100px 0 100px 0">
+					<Override slot="SectionContent" max-width="1100px" />
+					<Stack>
+						{"    "}
+						<StackItem width="50%" display="flex">
+							<Components.Embed width="100%" />
+							{"        "}{"    "}
+						</StackItem>
+						<StackItem width="50%" display="flex">
+							<Box>
+								<Text font="--lead" letter-spacing="1px">
+									Let's test it hard! We'll se what's possible with this awesome tool! And let's just add a little bit more text here...
+								</Text>
+							</Box>
+							{"        "}{"    "}
+						</StackItem>
+						{"    "}
+					</Stack>
+				</Section>
+				<Section padding="100px 0 100px 0" lg-padding="100px 0 100px 0" background="#000000">
+					<Override slot="SectionContent" max-width="1100px" />
+					<Box
+						quarkly-title="container"
+						max-width="1100px"
+						margin="0px auto 0px auto"
+						padding="15px 0px 15px 0px"
+						display="flex"
+						align-items="stretch"
+						flex-direction="row"
+						justify-content="space-between"
 					>
-						About me
-					</Text>
-				</StackItem>
-			</Stack>
-		</Section>
+						<Box display="flex" align-items="center" justify-content="center">
+							<Components.NavLinkNew />
+							<Components.NavLinkNew />
+							<Components.NavLinkNew />
+							<Components.NavLinkNew />
+						</Box>
+					</Box>
+				</Section>
+			</Box>
+		</Box>
 	</Theme>;
 });

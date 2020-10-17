@@ -18,6 +18,18 @@ export default {
 				"type": "max-width",
 				"value": 992
 			}
+		],
+		"desktopSmall": [
+			{
+				"type": "min-width",
+				"value": "992"
+			}
+		],
+		"mobile": [
+			{
+				"type": "max-width",
+				"value": "478"
+			}
 		]
 	},
 	"color": {
@@ -36,7 +48,8 @@ export default {
 		"orange": "#FF7C22",
 		"red": "#DE350B",
 		"purple": "#FD6DF9",
-		"indigo": "#9B6CFC"
+		"indigo": "#9B6CFC",
+		"lightPink": "#ff9671"
 	},
 	"fontFamily": {
 		"sans": "-apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
@@ -47,7 +60,8 @@ export default {
 		"mono": "Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace",
 		"serifTimes": "Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif",
 		"serifGeorgia": "Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif",
-		"serifGaramond": "'Palatino Linotype', Palatino, Palladio, 'URW Palladio L', 'Book Antiqua', Baskerville, 'Bookman Old Style', 'Bitstream Charter', 'Nimbus Roman No9 L', Garamond, 'Apple Garamond', 'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook', 'Century Schoolbook L', Georgia, serif"
+		"serifGaramond": "'Palatino Linotype', Palatino, Palladio, 'URW Palladio L', 'Book Antiqua', Baskerville, 'Bookman Old Style', 'Bitstream Charter', 'Nimbus Roman No9 L', Garamond, 'Apple Garamond', 'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook', 'Century Schoolbook L', Georgia, serif",
+		"googleHind": "Hind, sans-serif"
 	},
 	"font": {
 		"headline1": "normal 900 72px/1.2 --fontFamily-sans",
@@ -151,5 +165,21 @@ export default {
 			}
 		}
 	},
-	"version": 1
+	"version": 1,
+	"fonts": {
+		"Hind": {
+			"family": "Hind",
+			"type": "google-fonts",
+			"meta": {
+				"category": "sans-serif",
+				"variants": [
+					"300",
+					"regular",
+					"500",
+					"600",
+					"700"
+				]
+			}
+		}
+	}
 }
